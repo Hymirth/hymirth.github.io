@@ -1,193 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      font-weight: 300;
-      height: 100%;
-      color: white;
-      background: url('background.png') no-repeat center center fixed;
-      background-attachment: fixed;
-      background-size: cover;
-    }
-
-    .diagonal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      min-height: 200vh;
-      background-color: rgba(44, 43, 48, 1.0);
-      clip-path: polygon(0 50%, 100% 30%, 100% 100%, 0% 100%);
-      z-index: 0;
-      will-change: transform; /* improves animation performance */
-    }
-
-    .overlay {
-      position: relative;
-      z-index: 1;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .maincontainer {
-      background-color: rgba(44, 43, 48, 0.5);
-      /* background: #40474F; */
-      /* border: 2px solid rgba(44, 43, 48, 0.7); */
-      border-radius: 0px;
-      min-height: 100vh;
-      padding: 2rem;
-
-      max-width: 960px;        /* 👈 controls max size */
-      width: 100%;             /* 👈 allow it to stretch */
-      margin: 0 auto;          /* 👈 center it horizontally */
-
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start; /* 👈 left-align content */
-      justify-content: flex-start;
-      text-align: left;
-    }
-
-    .tiles {
-      width: 100%;
-      padding-bottom: 5rem;
-      padding-left: 5rem;
-      padding-right: 5rem;
-      box-sizing: border-box;
-    }
-
-    .card {
-      min-height: 30vh;
-      padding: 0rem;
-      width: 100%;
-      box-sizing: border-box;
-      display: flex;
-      border-radius: 6px;
-      align-items: flex-start;
-    }
-
-    .card-image {
-      flex: 0 0 40%;       /* Fixed square size */
-      height: 100%;
-    }
-
-    .card-image img,
-    .card-image video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 44px;
-      aspect-ratio: 1 / 1;
-    }
-
-    .card-text {
-      flex: 2 1 60%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      text-align: left;
-      padding: 1rem;
-    }
-
-    .card-text h2,
-    .card-text h3,
-    .card-text p {
-      margin-top: 0;
-      font-weight: 300;
-    }
-
-    .title {
-      padding: 5rem;
-    }
-
-    .introduction {
-      padding: 2rem 5rem;
-    }
-
-    h1 {
-      font-size: 4rem;
-      font-weight: 300;
-      margin-bottom: 2rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 300;
-      margin-bottom: 2rem;
-    }
-
-    .link {
-      color: white;
-      text-decoration: none;
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-
-    .link:hover {
-      text-decoration: underline;
-    }
-
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-  <div class="diagonal-overlay" id="diagonal-bg"></div>
-  <div class="overlay">
-    
-    <div class = "title">
-      <h1>Portfol.io</h1>
-      <a href="blog.html" class="link">Blog</a>
-      <a href="version2.html" class="link">Alternate</a>
-      <a href="contact.html" class="link">Contact</a>
-    </div>
-    <div class = "maincontainer">
-      <div class = "introduction">
-        <h2>Hi.</h2>
-        <p>I'm Max Pollard. I'm an aspiring game developer — currently focused on graphics programming, but I enjoy exploring all aspects of the craft.</p>
-        <p>I started game development in the summer of 2024 through some Udemy courses in Unreal Engine. Since then, I've spread my wings and adopted a philosophy of following whatever part of game design currently excites me — often through personal, exploratory coding adventures.</p>
-        <p>Below you’ll find some of my work.</p>
+  <div class="background_wrapper">
+    <div class="hero" id="hero">
+      <div class="title">Portfol.io</h1></div>
+      <div class="divider"></div>
+      <div class="hero_nav">
+        <a href="blog.html">Blog</a>
+        <a href="Articles/Shadows/shadows.html">Alternate</a>
+        <a href="contact.html">Contact</a>
       </div>
-      <div class = "tiles">
-        <div class="card">
-          <div class="card-image">
-            <img src="background.png" alt="Shadow System Preview">
-          </div>
-          <div class="card-text">
-            <h2>Becalmed</h2>
-            <p>Becalmed is my current hobby project, and often the challenges and things that excite me in that are what lead me to do deep dives into
-              specific things such as atmosphere rendering, shadow systems, terrain generation and water shaders. So far there are no real goals of turning
-              it into a playable game. It's just something to help drive personal inspiration and a world I can enjoy being in.
-            </p>
+    </div>
+    <div class="content">
+      <div class="container">
+        <div class="intro">
+          <h2>Hi.</h2>
+          <p>I'm Max Pollard. I'm an aspiring game developer — currently focused on graphics programming, but I enjoy exploring all aspects of the craft.</p>
+          <p>I started game development in the summer of 2024 through some Udemy courses in Unreal Engine. Since then, I've spread my wings and adopted a
+            philosophy of following whatever part of game design currently excites me — often through personal, exploratory coding adventures.</p>
+          <p>Most of what I do lives in the 90% complete range, functional, efficient, but lacking that 10% extra polish you might do for a production game - 
+            it's to the point that I can't resist moving on to the next thing that excites me.
+          </p>
+          <p>This site is part portfolio, part devblog. I want to share what I'm working on and I think much of it speaks for my personal skills and growth.</p>
+        </div>
+        <div class="projects">
+          <div class="divider"></div>
+          <div class="card">
+            <div class="card-media">
+              <img src="background.png" alt="Preview">
+            </div>
+            <div class="card-box">
+              <div class="card-info">
+                <h2>Becalmed</h2>
+                <p>Becalmed is my current hobby project, and often the challenges and things that excite me in that are what
+                  lead me to do deep dives into specific things such as atmosphere rendering, shadow systems, terrain generation
+                  and water shaders. So far there are no real goals of turning it into a playable game. It's just something to help
+                  drive personal inspiration and a world I can enjoy being in.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    
     </div>
+
+    <script>
+      const overlay = document.getElementById('bg-overlay');
+      const hero = document.getElementById('hero');
+      window.addEventListener('scroll', () => {
+        overlay.style.transform = `translateY(${-1.0 * window.scrollY}px)`;
+      });
+      window.addEventListener('scroll', () => {
+        hero.style.transform = `translateY(${0.75 * window.scrollY}px)`;
+      });
+    </script>
   </div>
-
-  <script>
-  const overlay = document.getElementById('diagonal-bg');
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    console.log("Scroll event triggered, scrollY:", scrollY); // ✅ debug line
-    overlay.style.transform = `translateY(${scrollY * -1.5}px)`;
-  });
-</script>
-
 </body>
-
 </html>
